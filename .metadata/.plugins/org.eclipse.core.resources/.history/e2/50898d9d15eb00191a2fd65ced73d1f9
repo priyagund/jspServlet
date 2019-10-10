@@ -1,0 +1,8 @@
+package com.bridgelabz.servlet.model;
+
+public class Student 
+{
+	private String name;
+	private String 
+	
+}

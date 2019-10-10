@@ -1,0 +1,66 @@
+package com.bridgelabz.servlet.controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bridgelabz.servlet.model.Student;
+import com.bridgelabz.servlet.service.ImplStudentLogin;
+import com.bridgelabz.servlet.service.StudentLogin;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public LoginServlet() 
+    {
+        super();
+    }
+     ImplStudentLogin studentlogin=new ImplStudentLogin();
+     
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String userName=request.getParameter("userName");
+		String password=request.getParameter("password");
+		String submitType=request.getParameter("login");
+		try {
+			Student student=studentlogin.getStudent(userName, password);
+		
+		if(submitType.equals("login")&& student !=null && student.getName()!=null) 
+		{
+			 request.setAttribute("message", student.getName());
+			 request.getRequestDispatcher("welcome.jsp").forward(request, response);
+		}
+		
+		else if(submitType.equals("register"))
+		{
+			
+		}
+			
+			
+			
+			
+			
+			
+			
+		}
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		doGet(request, response);
+	}
+
+}

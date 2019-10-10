@@ -1,0 +1,83 @@
+package com.bridgelabz.servlet.controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bridgelabz.servlet.model.Student;
+import com.bridgelabz.servlet.service.ImplStudentLogin;
+import com.bridgelabz.servlet.service.StudentLogin;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public LoginServlet() 
+    {
+        super();
+    }
+     ImplStudentLogin studentlogin=new ImplStudentLogin();
+     
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String userName=request.getParameter("mailId");
+		String Password=request.getParameter("password");
+		String submitType=request.getParameter("login");
+		try {
+			Student student=studentlogin.getStudent(userName, Password);
+		
+		if(submitType.equals("login")&& student !=null && student.getName()!=null) 
+		{
+			 request.setAttribute("message", student.getmailId());
+			 request.getRequestDispatcher("welcome.jsp").forward(request, response);
+		}
+		
+		else if(submitType.equals("register"))
+		{
+			 String Name=request.getParameter("name");
+			 String mailId=request.getParameter("mailId");
+			 String mobNumber=request.getParameter("mailId");
+			 String password=request.getParameter("password");
+			 String reTypepassword=request.getParameter("reTypepassword");
+			 student.setName(Name);
+			 student.setmailId(mailId);
+			 student.setMobNumber(mobNumber);
+			 student.setPassword(password);
+			 student.setReTypePassword(reTypepassword);
+			 request.setAttribute("successMessage","Registration done please login to continue" );
+			 request.getRequestDispatcher("login.jsp").forward(request,response);
+		}
+		
+		else 
+		{
+			request.setAttribute("message", "Date not found goto loginpage");
+			request.getRequestDispatcher("login.jsp").forward(request,response);
+		}
+			
+			
+			
+			
+			
+			
+			
+		}
+			catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		doGet(request, response);
+	}
+
+}

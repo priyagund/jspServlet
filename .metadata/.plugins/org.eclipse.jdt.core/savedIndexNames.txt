@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+/home/bridgeit/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+3843343409.index
+3249670668.index
+1032356408.index
+4081318432.index
+958165498.index
+2246835478.index
+118165086.index
+2704611004.index
+2886230001.index

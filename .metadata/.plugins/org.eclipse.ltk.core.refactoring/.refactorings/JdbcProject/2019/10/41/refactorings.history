@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JdbcConnectivity.java&apos; to &apos;MyFirstLogin/src/com.bridgelabz.servlet.repository&apos;&#x0A;- Original project: &apos;JdbcProject&apos;&#x0A;- Destination element: &apos;MyFirstLogin/src/com.bridgelabz.servlet.repository&apos;&#x0A;- Original element: &apos;com.bridgelabz.loginpage.repositary.JdbcConnectivity.java&apos;" description="Copy compilation unit" destination="=MyFirstLogin/src&lt;com.bridgelabz.servlet.repository" element1="/src&lt;com.bridgelabz.loginpage.repositary{JdbcConnectivity.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1570681418910" units="1" version="1.0"/>
+</session>
