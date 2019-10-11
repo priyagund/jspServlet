@@ -7,3 +7,4 @@
 2019-10-10 19:46:44,093 [Worker-219: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-util/9.0.26/tomcat-util-9.0.26-sources.jar
 2019-10-10 19:57:06,141 [Worker-221: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-coyote/9.0.26/tomcat-coyote-9.0.26-sources.jar
 2019-10-10 19:57:06,863 [Worker-221: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-coyote/9.0.26/tomcat-coyote-9.0.26-sources.jar
+2019-10-11 09:21:57,340 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
