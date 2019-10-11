@@ -16,15 +16,15 @@
 		
 		<tr>
 			<td>Name :</td>
-			<td><input type="text" name="name"></td>
+			<td><input type="text" name="username"></td>
 		</tr>
 		<tr>
 			<td>MailId :</td>
-			<td><input type="text" name="name"></td>
+			<td><input type="text" name="mail"></td>
 		</tr>
 		<tr>
 			<td>Mobnumber :</td>
-			<td><input type="text" name="name"></td>
+			<td><input type="text" name="mobile"></td>
 		</tr>
 		
 		<tr>
@@ -37,7 +37,7 @@
 		</tr>
 		<tr>
 		<td><a href="login.jsp">Login</a></td>	
-			
+			<td><input type="submit" value="Register"></td>
 		</tr>
 	</table>
 

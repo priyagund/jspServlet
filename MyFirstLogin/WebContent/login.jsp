@@ -10,10 +10,11 @@
 	<form action="login" method="post">
 		<table
 			style="background-color: skyblue; margin-left: 20px; margin-top: 20px;">
+			<!--  
 			<tr>
 				<td><h3 style="color: red;">${message}</h3>
 				<td><h3 style="color: green;">${successMessage}</h3></td>
-			</tr>
+			</tr>-->
 			<tr>
 				<td><h3 style="color: red">Login Page !!!</h3>
 			</tr>
